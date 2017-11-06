@@ -45,11 +45,12 @@ export class PessoaPesquisaComponent implements OnInit {
 
         this.filtro.pagina = pagina;
 
-        this.pessoaService.pesquisar(this.filtro)
+        this.pessoaService
+            .pesquisar(this.filtro)
             .then(resultado => {
                 this.totalRegistros = resultado.total;
                 this.pessoas = resultado.pessoas;
-            });
+            }).catch(erro => this.errorHandler.handle(erro));
     }
 
 

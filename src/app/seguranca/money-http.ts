@@ -6,6 +6,11 @@ import { Observable } from 'rxjs/Observable';
 
 import { AuthService } from './auth.service';
 
+
+export class NotAuthenticatedError {
+
+}
+
 @Injectable()
 export class MoneyHttp extends AuthHttp {
 
@@ -54,6 +59,10 @@ export class MoneyHttp extends AuthHttp {
             const novoAccessTokenPromise = this.authService.obrerNovoAccessToken()
                 .then(() => {
 
+                    if(this.authService.isAccessTokenInvalido()) {
+                        throw new NotAuthenticatedError();
+                    }
+                    
                     return fn().toPromise();
 
                 });
