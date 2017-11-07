@@ -21,7 +21,7 @@ export class LancamentoService {
 
     constructor(private http: AuthHttp) {
         this.url = `${environment.apiUrl}/lancamentos`;
-     }
+    }
 
     pesquisar(filtro: LancamentoFiltro): Promise<any> {
 
