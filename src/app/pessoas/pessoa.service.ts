@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { AuthHttp } from 'angular2-jwt';
 import { Pessoa } from './../core/model';
 import { Injectable } from '@angular/core';
@@ -15,10 +16,10 @@ export class PessoaFiltro {
 @Injectable()
 export class PessoaService {
 
-    url: string = 'http://localhost:8080/pessoas';
+    private url: string;
 
     constructor(private http: AuthHttp) {
-
+        this.url = `${environment.apiUrl}/pessoas`;
     }
 
 
