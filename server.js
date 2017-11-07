@@ -9,5 +9,5 @@ app.get('/*', (req, res) => {
 
 console.log('Servidor rodando na porta 4200.');
 
-app.listen(4200);
+app.listen(process.env.PORT || 4200);
 
