@@ -7,6 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 >https://algamoneyapp-ui.herokuapp.com
 
 Usuário: admin@algamoney.com
+
 Senha: admin
 
 ## Development server
