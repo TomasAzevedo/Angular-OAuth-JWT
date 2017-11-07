@@ -4,7 +4,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Demo
 
+<<<<<<< HEAD
 https://algamoneyapp-ui.herokuapp.com/
+=======
+>https://algamoneyapp-ui.herokuapp.com
+
+Usuário: admin@algamoney.com
+
+Senha: admin
+>>>>>>> ad0c44a9ffc3d173cb7941656df32a785d23bf7d
 
 ## Development server
 
