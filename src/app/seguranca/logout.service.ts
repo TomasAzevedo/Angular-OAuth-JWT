@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { AuthService } from './auth.service';
 import { AuthHttp } from 'angular2-jwt';
 import { Injectable } from '@angular/core';
@@ -8,7 +9,10 @@ export class LogoutService {
     url = 'http://localhost:8080/tokens/revoke';
 
     constructor(private http: AuthHttp,
-                private authService: AuthService) { }
+                private authService: AuthService) {
+
+        this.url = `${environment.apiUrl}/tokens/revoke`;
+    }
 
 
     logout() {
